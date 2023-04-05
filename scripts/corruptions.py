@@ -31,12 +31,12 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-root_path = "/media/mediadrive2/intern/qjg1kor/code/clip-experiments/data/coco/train2014/"
-annFile_path = "/media/mediadrive2/intern/qjg1kor/code/clip-experiments/data/coco/annotations/captions_train2014.json"
+root_path = "/media/mediadrive2/intern/emno/code/clip-experiments/data/coco/train2014/"
+annFile_path = "/media/mediadrive2/intern/emno/code/clip-experiments/data/coco/annotations/captions_train2014.json"
 corruption_names = ['snow', 'fog', 'defocus_blur', 'gaussian_noise']
 coco = CocoCaptions(root=root_path, annFile=annFile_path)
 
-pascal_root = "/media/mediadrive2/intern/qjg1kor/code/clip-experiments/data/pascalvoc/"
+pascal_root = "/media/mediadrive2/intern/emno/code/clip-experiments/data/pascalvoc/"
 pascalvoc = VOCDetection(root=pascal_root, year="2012", download=True)
 dataset_dict = {"coco": coco, "pascalvoc": pascalvoc}
 
